@@ -1,9 +1,19 @@
 'use client'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
+import Link from 'next/link'
 export default function Home() {
   return (
     <main className="min-h-screen bg-background">
+      {/* Navigation */}
+      <nav className="fixed w-full top-0 bg-background/80 backdrop-blur-sm border-b z-50">
+        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+          <div className="font-semibold text-lg">Your Brand</div>
+          <Link href="/signin">
+            <Button variant="ghost">Sign In</Button>
+          </Link>
+        </div>
+      </nav>
       {/* Hero Section */}
       <section className="container mx-auto px-4 pt-32 pb-24">
         <div className="max-w-[800px] mx-auto text-center">
